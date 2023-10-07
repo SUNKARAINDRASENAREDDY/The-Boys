@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Institution</title>
+    <!-- Include Font Awesome for the bell icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Reset some default styles */
+        /* Global Styles */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            padding-bottom: 11px;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+        /* Student Info Styles */
+        
+        .student-info {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+        
+        .student-info img {
+            max-width: 100px;
+            height: 75px;
+            border-radius: 50%;
+            border: 4px solid #333;
+            margin-right: 20px;
+        }
+        
+        .student-name {
+            font-size: 24px;
+            font-weight: bold;
+            height: fit-content;
+            padding: -15px;
+        }
+        /* Bell Icon Styles */
+        
+        .bell-icon {
+            margin-left: auto;
+            /* Pushes the bell icon to the right */
+        }
+        
+        .bell-icon button {
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 18px;
+            margin-right: 10px;
+            /* Add some distance from the student logo */
+        }
+        /* Logout Button Styles */
+        
+        .logout-button {
+            text-align: center;
+            margin-left: 20px;
+            /* Add margin to separate the button from the bell icon */
+        }
+        
+        h1 {
+            margin-bottom: 10px;
+        }
+        
+        .logout-button button {
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            margin-right: 32px;
+            position: relative;
+        }
+        
+        .logout-button button:hover {
+            background-color: #ff6347;
+            /* Change the color on hover */
+        }
+        /* Navigation Styles */
+        
+        nav {
+            background-color: #7b7b7d;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            /* Links arranged in a column */
+            align-items: center;
+        }
+        
+        nav li {
+            margin: 10px 0;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #ff4500;
+            /* Change the color on hover */
+        }
+        /* Responsive Styles */
+        
+        nav a {
+            font-size: 16px;
+            margin: 0;
+        }
+        
+        .logout-button button {
+            font-size: 16px;
+        }
+        
+        button {
+            padding: 8px;
+        }
+        
+        #font {
+            margin: 5px 8px 8px 0px;
+            padding: 5px 8px 8px 0px;
+        }
+        
+        img {
+            float: left;
+            height: 150px;
+            width: 120px;
+            margin-left: 100px;
+        }
+        
+        #a {
+            align-items: flex-start;
+            font-size: medium;
+            margin: 25px;
+            height: 80px;
+            width: 250px;
+            margin-left: 25px;
+            font-size: x-large;
+            background: none;
+            border: none;
+
+        }
+        
+        #a:hover {
+            background-color: #7b7b7d;
+            border-radius: 10px;
+        }
+        
+        #av {
+            height: 440px;
+            background-color: #7b7b7d;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        #logo {
+            margin-left: 25px;
+            margin-right: 0px;
+            padding: 2px;
+        }
+        
+        .notification-count {
+            background-color: #eaa58b;
+            color: black;
+            border-radius: 50%;
+            font-size: 14px;
+            position: absolute;
+            padding: 2px 6px;
+            margin-top: -50px;
+            margin-right: -20px;
+        }
+        
+        #b {
+            background-color: #d6d6da;
+            width: 25%;
+            list-style-type: none;
+            height: 440px;
+        }
+        
+        @media screen and (max-width: 480px) {
+            @media screen and (max-width: 480px) {
+                header h1 {
+                    font-size: 28px;
+                }
+                body {
+                    font-family: 'Heebo', sans-serif;
+                    background-color: #f0f0f0;
+                }
+                header {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                .student-info {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                .student-info img {
+                    margin: 0;
+                }
+                .student-name h1 {
+                    font-size: 20px;
+                }
+                .bell-icon {
+                    margin: 10px 0;
+                }
+                .bell-icon button {
+                    font-size: 24px;
+                }
+                .logout-button {
+                    margin: 10px 0;
+                }
+                .logout-button button {
+                    font-size: 24px;
+                    margin-right: 0;
+                }
+                #font {
+                    margin-left: 0;
+                }
+                #c1 {
+                    margin: 0;
+                    font-size: small;
+                }
+                span {
+                    text-align: center;
+                    font-size: small;
+                }
+                #b {
+                    width: 100%;
+                    height: auto;
+                }
+                #a {
+                    width: 80%;
+                    margin: 10px;
+                }
+                .notification-count {
+                    margin-right: -10px;
+                }
+            }
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        #cal {
+            width: 80%;
+            margin-left: 0px;
+            height: 80%;
+        }
+        
+        #content {
+            width: 70%;
+            height: 90%;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #c{
+            background-color: #ff4500;
+            align-items: flex-start;
+            font-size: medium;
+            margin: 25px;
+            height: 80px;
+            width: 256px;
+            margin-left: 25px;
+            font-size: x-large;
+            border-radius: 5px;
+            border: none;
+        }
+        td,th{
+            text-align: center;
+            border: 2px solid black;
+            height:1cm;
+            width: 5cm;
+            font-size: larger;
+        }
+        th{
+            font-weight: bolder;
+            
+        }
+        table{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="https://www.linkpicture.com/q/vishnu.png" class="left">
+            <div id="font">
+
+                <h1>Vishnu Institute of Technology</h1>
+                <span id="c1">Vishnupur, Kovvada Rd, Kovvada, Andhra Pradesh 534202</span>
+                <br><span>ph : +91256496984 <br>email : vishnubhimavaram@gmail.com</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container2">
+        <div class="student-info">
+            <img src="https://loan-applications.northwestern.edu/image/student_icon.png" alt="Student Logo">
+            <div class="student-name">
+                <h1><%=data.name%></h1>
+            </div>
+            <!-- Bell Icon -->
+            <div class="bell-icon">
+                <button><i class="fa fa-bell"></i></button>
+                <div class="notification-count"><%=data.count%></div>
+            </div>
+            <!-- Logout Button -->
+            <div class="logout-button">
+                <button>Logout</button>
+            </div>
+        </div>
+        <div id="av">
+            <div id="b">
+
+                <form action="/dept_data" method="get"><button id="c">Placement data</button></form>
+                <form action="/c_filter" method="get"> <button id="a">fliter</button></form>
+                    `
+            </div>
+            <div id="content">
+                <table cellspacing="0">
+                    <tr>
+                      <th>Roll No</th>
+                      <th>Company</th>
+                      <th>Status</th>
+                      <th>Package</th>
+                      <th>Passout</th>
+                      <th>Date</th>
+                    </tr>
+                    <% for(var i=0;i<=data.n;i++){%>
+                      <tr>
+                        <td><%=data.place[i].id%></td>
+                        <td><%=data.place[i].company%></td>
+                        <td><%=data.place[i].status%></td>
+                        <td><%=data.place[i].salary%></td>
+                        <td><%=data.place[i].passout%></td>
+                        <td><%=data.place[i].date%></td>
+                      </tr>
+                     <% } %>
+                  </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
